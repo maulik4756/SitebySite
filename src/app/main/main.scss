@@ -1,0 +1,130 @@
+.outer{
+    float: left;
+    > .inner {
+            height: 100vh;
+            width: calc(100vw - 80px);
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+}
+
+.logo{
+    background-color: aquamarine;
+
+}
+.first{
+    font-size: 50px;
+    font-weight: bold;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.sFirst{
+    background-color: #ED1846;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    > h1 {
+        font-size: 80px;
+        color: white;
+        font-weight: bold;
+        width: 100px;
+        position: relative;
+    }
+    > Image{
+        position: absolute;
+    }
+}
+.sFirstcontainer{
+    height: 300px;
+    width: 300px;
+}
+.sSecond{
+    background-color: white;
+    width: 50%;
+    height: 100vh;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.third{
+    background-color: #3D91DB;
+    height: 100%;
+    width: calc(100vw - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > .thirdContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >a > h1 {
+                font-size: 80px;
+                font-weight: bold;
+                width : 50px;
+                padding-bottom: 100px;
+                color: #FFC5C9;
+            }
+    }
+    > p{
+        margin-top: -200px;
+        margin-left: 60px;
+        color: white;
+    }
+    
+}
+.fourth {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.ffContainer{
+    width: 50%;
+        height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    background-color: #FFE0E3;
+}
+.fsContainer{
+    width: 44.75%;
+    height: 100vh;
+    float: right;
+    height: 100vh;
+    position: relative;
+}
+.fifth{
+    background-color: #00C081;
+    height: 100vh;
+    width: calc(100vw - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > div{
+        margin-left: 70px;
+        > p{
+            color: white;
+        }
+        >h1{
+            font-size: 80px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}

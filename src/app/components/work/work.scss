@@ -1,0 +1,29 @@
+.work{
+    position: fixed;
+    height: 100%;
+    width: 70vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    z-index: 1;
+    float: left;
+}
+// .random{
+//     display: flex;
+//     justify-content:center;
+// }
+
+.workContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+}
+.imgContainer{
+    display: flex;
+    flex-direction: column;
+    margin:30px
+}
+.imgContainer:hover{
+    opacity: 30%;
+}

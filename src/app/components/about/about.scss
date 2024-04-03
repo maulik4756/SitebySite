@@ -1,0 +1,43 @@
+.about{
+    position: fixed;
+    height: 100%;
+    width: 70vw;
+    background-color: #87F9D4;
+    > .firstContainer{
+        display: flex;
+        flex-direction: column;
+        > .heading{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        > .description{
+            width: 700px;
+        }
+    }
+    > .secondContainer{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+}
+.contactForm{
+    > .nameEmail {
+            margin-bottom: 20px;
+            > .name , .email{
+                outline: none;
+                color: black;
+                border-bottom: 20px;
+                margin-right: 10px;
+                background-color: #87F9D4;
+            }
+        }
+    > .Message{
+        outline: none;
+            color: black;
+            border-bottom: 20px;
+            background-color: #87F9D4;
+    }
+}
+ 
