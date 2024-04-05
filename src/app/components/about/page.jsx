@@ -1,16 +1,14 @@
-"use client"
-import React, { useState } from 'react'
+
+import Image from 'next/image'
 import "./about.scss"
-function About() {
-  const [isVisible,setIsVisible] = useState(true)
+function About({onClose}) {
   return (
     <>
-      { isVisible &&
         <div className='about'>
           <div className='firstContainer'>
             <div className='heading'>
               <h1>About The Studio</h1>
-              <button onClick={()=>setIsVisible((prev)=>!prev)}>Close</button>
+              <button onClick={()=>onClose("about")}><Image src="./cross.svg" height={40} width={40}/></button>
             </div>
             <div className='description'>
               STUDIO BAGAZ' is a graphic design studio based in Tel Aviv,
@@ -42,18 +40,26 @@ function About() {
               <h1>Contact Us:</h1>
               <div className='nameEmail'>
                 <input type='text' placeholder='Name' className='name' />
-                <hr/>
                 <input type='email' placeholder='Email' className='email'/>
-                <hr/>
               </div>
-              <textarea placeholder='Message' cols={25} rows={5} className='Message'/>
+              <textarea placeholder='Message'  cols={45} rows={5} className='Message'/>
               <br/>
               <button className='send'>Send</button>
             </div>
           </div>
-          <div className='thirdContainer'></div>
+          <div className='thirdContainer'>
+            <div className='tfContainer'>
+              <Image src="./facebook.svg" height={40} width={40} />
+              <Image src="./instagram.svg" height={40} width={40} />
+            </div>
+            <div className="olu">
+              <a href='#'>info@studiobgz.com</a> |
+              <a href='#'>052.4000900</a> |
+              <a href='#'>051.4020900</a> 
+            </div>
+          </div>
+
         </div>
-      }
   </>
       )
   

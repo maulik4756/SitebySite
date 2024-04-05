@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import "./work.scss"
 
-function Work() {
-    const workObject = [
+const workObject = [
         {
             path: "/work/1.webp",
             desc: "Maccabi Tzair"
@@ -78,30 +77,29 @@ function Work() {
             desc: "Maccabi Tzair"
         },
     ];
-    const [isVisible, setIsVisible] = useState(true);
+
+function Work({onClose}) {
+    
     return (
-    <>
-        { isVisible && 
-                (
-                    <div div className='work' >
-                        <div className='random'>
-                            <h1>Work</h1>
-                            <button onClick={()=>setIsVisible((prev)=>!prev)}>X</button>
+    
+        <div div className='work' >
+            <div className='random'>
+                <p></p>
+                <h1>Work</h1>
+                <button onClick={()=>onClose("work")}><Image src="./cross.svg" height={40} width={40}/></button>
+            </div>
+            <div className='workContainer'  >
+                {workObject.map((obj,index) => {
+                    return (
+                        <div className='imgContainer' key={index}>
+                            <Image src={obj.path} height={300} width={300} alt='' />
+                            <p>{obj.desc}</p>
                         </div>
-                        <div className='workContainer'  >
-                            {workObject.map((obj,index) => {
-                                return (
-                                    <div className='imgContainer' key={index}>
-                                        <Image src={obj.path} height={300} width={300} alt='' />
-                                        <p>{obj.desc}</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                )
-            }
-    </>
+                    )
+                })}
+            </div>
+        </div>
+              
   )
 }
 

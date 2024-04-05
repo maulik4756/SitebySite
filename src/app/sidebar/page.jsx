@@ -5,27 +5,32 @@ import Work from "../components/work/page";
 import About from "../components/about/page";
 import Contact from "../components/contact/page";
 function Sidebar() {
-  const [isopen, setisopen] = useState(false);
-  const [istrue, setistrue] = useState(false);
-  const [ispressed, setispressed] = useState(false);
+  const [isVisibleObj, setIsVisibleObj] = useState({
+    work: false,
+    about: false,
+    contact: false
+  })
+  function visiblePerticularSidebar(name){
+    setIsVisibleObj({...isVisibleObj , [name]: !isVisibleObj?.[name]})
+  }
   return (
     <div className="container">
-      <button onClick={() => setisopen((prev) => !prev)}>Work</button>
+      <button onClick={() => visiblePerticularSidebar("work")}>Work</button>
       {
-        isopen && (
-          <Work/>
+        isVisibleObj?.work && (
+          <Work onClose={ visiblePerticularSidebar} />
         )
       }
-      <button onClick={() => setistrue((prev) => !prev)}>About</button>
+      <button onClick={() => visiblePerticularSidebar("about")}>About</button>
       {
-        istrue && (
-          <About/>
+        isVisibleObj?.about && (
+          <About  onClose={ visiblePerticularSidebar}/>
         )
       }
-      <button onClick={() => setispressed((prev) => !prev)}>Contact</button>
+      <button onClick={() => visiblePerticularSidebar("contact")}>Contact</button>
       {
-        ispressed && (
-          <Contact/>
+        isVisibleObj?.contact && (
+          <Contact onClose={ visiblePerticularSidebar}/>
         )
       }
     </div>
