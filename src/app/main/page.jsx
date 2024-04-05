@@ -28,14 +28,12 @@ function Mypage() {
         return "/foodside.webp";
     }
   };
-  const NUMBER_OF_PICTURES = 1;
-  const [index, setIndex] = useState(0);
+  const NUMBER_OF_PICTURES = 3;
+  const [index, setIndex] = useState(1);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prevIndex) =>
-        index == NUMBER_OF_PICTURES ? 0 : prevIndex + 1
-      );
+      setIndex(index => (index == NUMBER_OF_PICTURES ? 1 : index + 1));
     }, 2000);
     return () => {
       /* cleanup */
@@ -80,11 +78,11 @@ function Mypage() {
         </div>
       </div>
       <div className="fifth">
-        <a href="#"><Image src="/food.webp" height={900} width={700} alt="" /></a>
+        <a href="#"><Image src="/food.webp" height={800} width={700} alt="" /></a>
         <div >
           <p>Visual Identity</p>
           <h1>Japo</h1>
-          <a href="#"><Image src={getPicture2(index)} height={350} width={250} alt="" /></a>
+          <a href="#"><Image src={getPicture2(index)} height={300} width={250} alt="" /></a>
         </div>
       </div>
     </div>

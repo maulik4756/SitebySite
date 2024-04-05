@@ -1,7 +1,10 @@
 .about{
     position: fixed;
     height: 100%;
-    width: 70vw;
+    width: 60vw;
+    right: 0;
+    overflow-y: auto;
+    z-index: 1;
     background-color: #87F9D4;
     > .firstContainer{
         display: flex;
@@ -10,34 +13,95 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 50px;
             margin-bottom: 50px;
+            > h1{
+                font-size: 50px;
+                margin-left: 50px;
+            }
         }
         > .description{
             width: 700px;
+            margin-left: 50px;
+        }
+        > hr{
+            width: 5%;
+            border-top-width: 4px;
+            border-color: black;
+            margin-left: 50px;
         }
     }
     > .secondContainer{
         display: flex;
         justify-content: space-between;
-    
+        margin-top: 70px;
+        margin-left: 50px;
+        > .areaofExperties{
+            > h1{
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+        }
     }
 }
 .contactForm{
+    margin-right: 50px;
+    > h1{
+        font-size: 25px;
+            font-weight: bold;
+    }
+    > button {
+        margin-left: 45%;
+    }
     > .nameEmail {
+            margin-top: 40px;
             margin-bottom: 20px;
+            display: flex;
+            
             > .name , .email{
                 outline: none;
-                color: black;
-                border-bottom: 20px;
-                margin-right: 10px;
+                border-color: black;
+                border-width: 0 0 2px;
+                margin-right: 40px;
                 background-color: #87F9D4;
+                width : 230px;
             }
         }
     > .Message{
         outline: none;
-            color: black;
-            border-bottom: 20px;
-            background-color: #87F9D4;
+        border-color: black;
+        border-width: 0 0 2px;
+        background-color: #87F9D4;
+        resize: none;
+        margin-top: 20px;
     }
 }
+.thirdContainer{
+    margin-top: 70px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    > .tfContainer{
+    
+       display: flex;
+       width: 100px;
+       justify-content: space-between;
+       align-items: center;
+    }
+    > .olu{
+        > a{
+            margin-right: 7px;
+            margin-left: 10px;
+        }
+        > a:hover{
+            color: white;
+        }
+    }
+    
+}
+
+
  

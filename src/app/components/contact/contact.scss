@@ -1,6 +1,105 @@
-.contact{
+._about {
     position: fixed;
     height: 100%;
-    width: 100vw;
-    background-color: blueviolet;
+    width: 60vw;
+    right: 0;
+    overflow-y: auto;
+    z-index: 1;
+    background-color: #EB2329;
+
+    >.first_Container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 80px;
+        >._heading {
+            display: flex;
+            flex-direction: column;
+            >h1 {
+                font-size: 40px;
+                color: white;
+            }
+            >p{
+                color: white;
+            }
+        }
+    }
+
+    >.second_Container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-left: 80px;
+        margin-right: 100px;
+        margin-bottom: 50px;
+
+        >.areaof_Experties {
+                margin-bottom: 40px;
+                display: flex;
+                flex-direction: column;
+                > a{
+                    color: white;
+                }
+                >._olu {
+                    >a {
+                        margin-top: 30px;
+                        margin-right: 7px;
+                        color: white;
+                    }
+        
+                    >a:hover {
+                        color: white;
+                    }
+                }
+        
+            }
+    }
 }
+
+.contact_Form {
+    >.name_Email {
+        margin-bottom: 20px;
+        display: flex;
+        >._name,
+        ._email {
+            outline: none;
+            color: white;
+            border-color: black;
+            border-width: 0 0 2px;
+            margin-right: 40px;
+            background-color: #EB2329;
+            width: 230px;
+            &::placeholder{
+                color: white;
+            }
+        }
+    }
+
+    >._Message {
+        outline: none;
+        border-color: black;
+        border-width: 0 0 2px;
+        background-color: #EB2329;
+        resize: none;
+        margin-top: 20px;
+        &::placeholder{
+            color: white;
+        }
+    }
+    >button {
+        margin-left: 45%;
+        color: white;
+    }
+}
+.tf_Container {
+
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+.third_Container{
+    display: flex;
+    justify-content: space-around;
+}
+

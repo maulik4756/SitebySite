@@ -1,18 +1,25 @@
 .work{
     position: fixed;
     height: 100%;
-    width: 70vw;
+    width: 60vw;
     background-color: white;
     display: flex;
     flex-direction: column;
-    overflow-x: scroll;
+    overflow-y: auto;
     z-index: 1;
-    float: left;
+    right: 0;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+   
 }
-// .random{
-//     display: flex;
-//     justify-content:center;
-// }
+.random{
+    display: flex;
+    justify-content:space-between;
+    > h1{
+        font-size: 40px;
+    }
+}
 
 .workContainer{
     display: grid;
